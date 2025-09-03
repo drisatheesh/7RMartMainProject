@@ -11,11 +11,13 @@ import pages.HomePage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
 import utilities.FakerUtility;
+import utilities.PageUtility;
 
 public class AdminUserTest extends Base {
 	HomePage homepage;
 	AdminUserPage adminuserpage;
 	FakerUtility faker=new FakerUtility();
+	PageUtility utility=new PageUtility();
 	 
   @Test
   
@@ -30,7 +32,7 @@ public class AdminUserTest extends Base {
 	// String username=faker.getFakeFirstName();
 	 //String password=faker.getPassword();
 	  
-	  adminuserpage.newClick().usertext(ExcelUtility.getStringData(1,0,"AdminUserText")).password(ExcelUtility.getStringData(1,1,"AdminUserText")
+	  adminuserpage.newClick().usertext(ExcelUtility.getStringData(3,0,"AdminUserText")).password(ExcelUtility.getStringData(3,1,"AdminUserText")
 		 ).select().saveClick();
 	/* AdminUserPage adminuserpage=new AdminUserPage(driver);
 	  adminuserpage.moreinfoClick();
@@ -41,5 +43,13 @@ public class AdminUserTest extends Base {
 	  adminuserpage.saveClick();*/
 	  boolean isalert=adminuserpage.isAlert();
 	  Assert.assertTrue(isalert,"alert not displayed");
+  }@Test
+  public void verifyWhetherTheUserIsAbleToSearchAdminUserInformation() throws IOException
+  {
+	  LoginPage loginpage=new LoginPage(driver);
+	  loginpage.userpass("admin","admin");
+	  homepage=loginpage.signing();
+	  adminuserpage=homepage.moreinfoClick();
+	  adminuserpage.search().enterUsername(ExcelUtility.getStringData(1,0,"AdminUserSearch")).enteruserType().enteruserSearch();
   }
 }

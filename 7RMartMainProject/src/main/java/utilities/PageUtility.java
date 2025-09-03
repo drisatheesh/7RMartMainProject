@@ -49,7 +49,8 @@ public class PageUtility {
  public void javascript(WebElement element,WebDriver driver)
  {
 	   JavascriptExecutor js=(JavascriptExecutor)driver;
-	   js.executeScript("window.scrollBy(0,1000)");
+	   js.executeScript("arguments[0].click();",element);
+		  element.click();
  }
  
 }

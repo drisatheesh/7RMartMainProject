@@ -20,6 +20,9 @@ public class HomePage {
 	 @FindBy(xpath="//img[@style='width: 1.5rem;height: auto;']")WebElement image;
 	 @FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin'and@class='small-box-footer']")WebElement moreinfo;
 	 @FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news' and@class='small-box-footer']")WebElement moreinfomanage;
+	 @FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-category' and@class='small-box-footer']")WebElement managecategory;
+	 @FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-contact' and@class='small-box-footer']")WebElement managecontact;
+
 	 public AdminUserPage moreinfoClick()
 	 {
 	 	moreinfo.click();
@@ -30,6 +33,16 @@ public class HomePage {
 			moreinfomanage.click();
 			return new ManageNews(driver);
 		}
+	 public ManageCategoryPage managecategoryMoreinfoClick()
+	 {
+		 managecategory.click();
+		 return new ManageCategoryPage(driver);
+	 }
+	 public ManageContactPage manageContactMoreinfoClick()
+	 {
+		 managecontact.click();
+		 return new ManageContactPage(driver);
+	 }
 	 public HomePage adminClick()
 	 {
 		 wait.waitForElementToBeClickable(driver, admin);

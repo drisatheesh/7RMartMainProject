@@ -15,9 +15,9 @@ import utilities.ExcelUtility;
 
 public class LoginTest extends Base{
 	HomePage homepage;
-  @Test
+  @Test(groups = {"smoke"})
   @Parameters({"username","password"})
-  public void loginWithCorrectUsernameAndPassword(String username,String password) 
+  public void loginWithCorrectUsernameAndCorrectPasswords(String username,String password) 
   {
 	  LoginPage loginpage=new LoginPage(driver);
 	  loginpage.userpass(username,password);
@@ -36,7 +36,7 @@ public class LoginTest extends Base{
 	  boolean isalertdisplayed=loginpage.isAlertDisplayed();
 	  Assert.assertTrue(isalertdisplayed,"alert not displayed");
   }
-  @Test
+  @Test(groups= {"regression"})
   public void loginWithIncorrectUsernameAndCorrectPassword() throws IOException
   {
 	  String username=ExcelUtility.getStringData(1,0,"LoginTest");

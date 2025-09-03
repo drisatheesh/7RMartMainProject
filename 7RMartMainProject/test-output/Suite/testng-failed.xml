@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="MainTest(failed)">
+  <listeners>
+    <listener class-name="generatereport.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="FirefoxTest(failed)">
+    <parameter name="password" value="admin"/>
     <classes>
-      <class name="testscript.LoginTest">
+      <class name="testscript.HomePageTest">
         <methods>
           <include name="intialiseBrowser"/>
-          <include name="loginWithCorrectUsernameAndPassword"/>
+          <include name="afterMethod"/>
+          <include name="verifyWhetherTheUserIsAbleToLogout"/>
         </methods>
-      </class> <!-- testscript.LoginTest -->
+      </class> <!-- testscript.HomePageTest -->
     </classes>
-  </test> <!-- MainTest(failed) -->
+  </test> <!-- FirefoxTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -12,7 +12,7 @@ public class HomePageTest extends Base {
   public void verifyWhetherTheUserIsAbleToLogout()
   {
 	  LoginPage loginpage=new LoginPage(driver);
-	  loginpage.userpass("admin", "admin");
+	  loginpage.userpass("admin123","admin");
 	  homepage=loginpage.signing();
 	  homepage.adminClick().logoutselection();
 	  /*HomePage homepage=new HomePage(driver);
@@ -21,7 +21,7 @@ public class HomePageTest extends Base {
 	  homepage.adminClick();
 	  homepage.logoutselection();*/
 	  //System.out.println(driver.getTitle());
-	  String expected="Login | 7rmart supermarket1";
+	  String expected="Login | 7rmart supermarket";
 	  String actual=driver.getTitle();
 	  Assert.assertEquals(expected, actual,"logout failed");
   }

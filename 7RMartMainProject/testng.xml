@@ -3,10 +3,8 @@
 <suite name="Suite">
 	<test thread-count="5" name="MainTest">
 		<classes>
-			<class name="testscript.LoginTest">
-			<methods>
-				<include name="loginWithCorrectUsernameAndIncorrectPassword"></include>
-			</methods>
+			<class name="testscript.ManageContactTest">
+			
 			</class>
 		</classes>
 	</test> <!--

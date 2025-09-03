@@ -25,6 +25,11 @@ public AdminUserPage(WebDriver driver)
 @FindBy(xpath="//select[@id='user_type']")WebElement sel;
 @FindBy(xpath="//button[@class='btn btn-block-sm btn-danger' and@name='Create']")private WebElement save;
 @FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")WebElement alert;
+@FindBy(xpath="//a[@class='btn btn-rounded btn-primary']")WebElement search;
+@FindBy(xpath="@FindBy(xpath=//a[@class='btn btn-rounded btn-primary']")WebElement reset;
+@FindBy(xpath="//input[@id='un']")WebElement username;
+@FindBy(xpath="//select[@id='ut']")WebElement usertype;
+@FindBy(xpath="//button[@class='btn btn-block-sm btn-danger' and@value='sr']")WebElement searchuser;
 
 public AdminUserPage newClick()
 {
@@ -58,6 +63,28 @@ public AdminUserPage saveClick()
 public boolean isAlert()
 {
 	return alert.isDisplayed();
+}
+public AdminUserPage search()
+{
+	search.click();
+	return this;
+}
+public AdminUserPage enterUsername(String user)
+{
+	username.sendKeys(user);
+	return this;
+}
+public AdminUserPage enteruserType()
+{
+	utility.selectByIndex(usertype, 2);
+	return this;
+}
+
+public AdminUserPage enteruserSearch()
+{
+	wait.waitForElementToBeClickable(driver, searchuser);
+	searchuser.click();
+	return this;
 }
 
 }

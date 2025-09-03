@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-
-	<parameter name="username" value="heeja"></parameter>
-	<parameter name="password" value="7156"></parameter>
+<parameter name="browser" value="chrome"></parameter>
+	<parameter name="username" value="admin"></parameter>
+	<parameter name="password" value="admin"></parameter>
 	<test thread-count="5" name="MainTest">
 		<classes>
 		
 		
 			
 		
-			<class name="testscript.AdminUserTest">
+			<class name="testscript.LoginTest">
 				<methods>
-					<include name="verifyWhetherTheUserIsAbleToCreateAdminUserInformation"></include>
+					<include name="loginWithCorrectUsernameAndPassword"></include>
 				</methods>
 			</class>
 			</classes>
-		</>
+		
 		</test> <!--
 	MainTest -->
 </suite> <!--
