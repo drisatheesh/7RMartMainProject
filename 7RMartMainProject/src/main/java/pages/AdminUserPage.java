@@ -30,6 +30,8 @@ public AdminUserPage(WebDriver driver)
 @FindBy(xpath="//input[@id='un']")WebElement username;
 @FindBy(xpath="//select[@id='ut']")WebElement usertype;
 @FindBy(xpath="//button[@class='btn btn-block-sm btn-danger' and@value='sr']")WebElement searchuser;
+@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/user/delete?del=15313&page_ad=1']")WebElement delete;
+@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")WebElement useralert;
 
 public AdminUserPage newClick()
 {
@@ -85,6 +87,16 @@ public AdminUserPage enteruserSearch()
 	wait.waitForElementToBeClickable(driver, searchuser);
 	searchuser.click();
 	return this;
+}
+public AdminUserPage deleteClick()
+{
+	delete.click();
+	driver.switchTo().alert().accept();
+	return this;
+}
+public boolean adminUserisAlert()
+{
+	return useralert.isDisplayed();
 }
 
 }

@@ -26,14 +26,13 @@ public class AdminUserTest extends Base {
 	  
 	  
 	  LoginPage loginpage=new LoginPage(driver);
-	  loginpage.userpass("admin","admin");
+	  loginpage.userpass(ExcelUtility.getStringData(4,0,"LoginTest"),ExcelUtility.getStringData(4,1,"LoginTest"));
 	  homepage=loginpage.signing();
 	  adminuserpage=homepage.moreinfoClick();
 	// String username=faker.getFakeFirstName();
 	 //String password=faker.getPassword();
 	  
-	  adminuserpage.newClick().usertext(ExcelUtility.getStringData(3,0,"AdminUserText")).password(ExcelUtility.getStringData(3,1,"AdminUserText")
-		 ).select().saveClick();
+	  adminuserpage.newClick().usertext(ExcelUtility.getStringData(1,0,"AdminUserText")).password(ExcelUtility.getStringData(1,1,"AdminUserText")).select().saveClick();
 	/* AdminUserPage adminuserpage=new AdminUserPage(driver);
 	  adminuserpage.moreinfoClick();
 	  adminuserpage.newClick();
@@ -41,15 +40,25 @@ public class AdminUserTest extends Base {
 	  adminuserpage.password("ab78");
 	  adminuserpage.select();
 	  adminuserpage.saveClick();*/
-	  boolean isalert=adminuserpage.isAlert();
-	  Assert.assertTrue(isalert,"alert not displayed");
+	  boolean isalertdisplayed=adminuserpage.adminUserisAlert();
+	  Assert.assertTrue(isalertdisplayed,"alert not displayed");
+	 
   }@Test
   public void verifyWhetherTheUserIsAbleToSearchAdminUserInformation() throws IOException
   {
 	  LoginPage loginpage=new LoginPage(driver);
-	  loginpage.userpass("admin","admin");
+	  loginpage.userpass(ExcelUtility.getStringData(4,0,"LoginTest"),ExcelUtility.getStringData(4,1,"LoginTest"));
 	  homepage=loginpage.signing();
 	  adminuserpage=homepage.moreinfoClick();
 	  adminuserpage.search().enterUsername(ExcelUtility.getStringData(1,0,"AdminUserSearch")).enteruserType().enteruserSearch();
+  }
+  @Test
+  public void verifyWetherTheUserIsAbleToDeleteAdminUserInformation() throws IOException
+  {
+	  LoginPage loginpage=new LoginPage(driver);
+	  loginpage.userpass(ExcelUtility.getStringData(4,0,"LoginTest"),ExcelUtility.getStringData(4,1,"LoginTest"));
+	  homepage=loginpage.signing();
+	  adminuserpage=homepage.moreinfoClick();
+	  adminuserpage.deleteClick();
   }
 }

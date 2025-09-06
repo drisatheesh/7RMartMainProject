@@ -10,10 +10,14 @@ import org.openqa.selenium.support.PageFactory;
 
 import constants.Constants;
 import utilities.FileUploadUtility;
+import utilities.PageUtility;
+import utilities.WaitUtility;
 
 public class ManageCategoryPage {
 	public WebDriver driver;
 	FileUploadUtility file=new FileUploadUtility();
+	PageUtility page=new PageUtility();
+	WaitUtility wait=new WaitUtility();
 	String pathh=Constants.CHOSEFILE1;
  public ManageCategoryPage(WebDriver driver)
  {
@@ -24,7 +28,7 @@ public class ManageCategoryPage {
  @FindBy(xpath="//input[@class='form-control']")WebElement category;
  @FindBy(xpath="//input[@id='main_img']")WebElement choosefile;
  @FindBy(xpath="//button[@type='submit']")WebElement save;
-
+ @FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/category/delete?del=2857&page_ad=1']")WebElement deletee;
  
  public ManageCategoryPage newClick()
  {
@@ -38,17 +42,27 @@ public class ManageCategoryPage {
  }
  public ManageCategoryPage chooseFile() throws AWTException
  {
-	 choosefile.click();
-	 file.fileUploadForSendKeys(choosefile, pathh);;
-	//file.fileUploadForRobotClass(choosefile,pathh);
-	return this;
+	
+		    
+		    choosefile.sendKeys(pathh);
+		    return this;
+		
  
  }
 
  public ManageCategoryPage save()
  {
-	 save.click();
-	 return this;
+	 page.javascript(save, driver);
+		wait.waitForElementToBeClickable(driver, save);
+		save.click();
+		return this;
+	 
+ }
+ public ManageCategoryPage deleteeClick()
+ {
+ 	deletee.click();
+ 	driver.switchTo().alert().accept();
+ 	return this;
  }
 	 
 }

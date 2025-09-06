@@ -24,7 +24,9 @@ public class ManageContactPage {
 	@FindBy(xpath="//textarea[@name='address']")WebElement address;
 	@FindBy(xpath="//textarea[@name='del_time']")WebElement deliverytime;
 	@FindBy(xpath="//input[@name='del_limit']")WebElement deliverycharge;
-	@FindBy(xpath="//button[@class='btn btn-block-sm btn-info']")WebElement update;
+	@FindBy(xpath="//button[@type='submit']")WebElement update;
+	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")WebElement alert;
+
 	public ManageContactPage editClick()
 	{
 		edit.click();
@@ -68,4 +70,8 @@ public class ManageContactPage {
 		update.click();
 		return this;
 	}
+	public boolean isAlertDisplayed()
+	 {
+		 return alert.isDisplayed();
+	 }
 }

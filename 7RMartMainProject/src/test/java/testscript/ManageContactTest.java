@@ -1,23 +1,31 @@
 package testscript;
 
+import java.io.IOException;
+
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import pages.AdminUserPage;
+import constants.Constants;
+
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ManageContactPage;
+import utilities.ExcelUtility;
 
 public class ManageContactTest extends Base {
 	HomePage homepage;
 	ManageContactPage managecontactpage;
   @Test
-  public void verifyWhetherTheUserIsAbleToUpdateManageContact() 
+  public void verifyWhetherTheUserIsAbleToUpdateManageContact() throws IOException 
   {
 	  LoginPage loginpage=new LoginPage(driver);
-	  loginpage.userpass("admin123","admin");
+	  loginpage.userpass(ExcelUtility.getStringData(4,0,"LoginTest"),ExcelUtility.getStringData(4,1,"LoginTest"));
+
 	  homepage=loginpage.signing();
 	  managecontactpage=homepage.manageContactMoreinfoClick();
-	  managecontactpage.editClick().enterNumber("98654712").enteremail("satheesh@gmail.com").enterAddress("Malavila").enterDeliveryTime("4pm").enterDeliveryCharge("50").clickUpdate();
+	  managecontactpage.editClick().enterNumber(Constants.NUM).enteremail(Constants.EMAIL).enterAddress(Constants.ADDRESS).enterDeliveryTime(Constants.TIME).enterDeliveryCharge(Constants.CHARGE).clickUpdate();
+	  //boolean isalertdisplayed=managecontactpage.isAlertDisplayed();
+	  //Assert.assertTrue(isalertdisplayed,"alert not displayed");
 	  
   }
 }

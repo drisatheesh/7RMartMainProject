@@ -45,6 +45,8 @@ public class LoginTest extends Base{
 	  LoginPage loginpage=new LoginPage(driver);
 	  loginpage.userpass(username, password);
 	  loginpage.signing();
+	  boolean isalertdisplayed=loginpage.isAlertDisplayed();
+	  Assert.assertTrue(isalertdisplayed,"alert not displayed");
   }
   @Test
   public void loginWithIncorrectUsernameAndIncorrectPassword() throws IOException
@@ -55,6 +57,8 @@ public class LoginTest extends Base{
 	  LoginPage loginpage=new LoginPage(driver);
 	  loginpage.userpass(username,password);
 	  loginpage.signing();
+	  boolean isalertdisplayed=loginpage.isAlertDisplayed();
+	  Assert.assertTrue(isalertdisplayed,"alert not displayed");
 	 
 	  
   }
