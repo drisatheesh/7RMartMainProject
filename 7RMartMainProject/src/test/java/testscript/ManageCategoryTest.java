@@ -24,7 +24,7 @@ public class ManageCategoryTest extends Base {
 	  loginpage.userpass(ExcelUtility.getStringData(4,0,"LoginTest"),ExcelUtility.getStringData(4,1,"LoginTest"));
 	  homepage=loginpage.signing();
 	  managecategory=homepage.managecategoryMoreinfoClick();
-	  managecategory.newClick().category("Biscut").chooseFile().save();
+	  managecategory.newClick().category(Constants.CATEGORY).chooseFile().save();
 	  
 }
   @Test
