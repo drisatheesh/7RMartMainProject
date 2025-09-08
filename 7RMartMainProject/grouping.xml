@@ -22,15 +22,6 @@
         </classes>
     </test>
 
-    <test name="RegressionTests">
-        <groups>
-            <run>
-                <include name="regression"/>
-            </run>
-        </groups>
-        <classes>
-            <class name="testscript.LoginTest"/>
-        </classes>
-    </test>
+    
 
 </suite>

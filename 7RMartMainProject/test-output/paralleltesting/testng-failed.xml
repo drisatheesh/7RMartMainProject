@@ -11,13 +11,6 @@
           <include name="afterMethod"/>
         </methods>
       </class> <!-- testscript.ManageContactTest -->
-      <class name="testscript.HomePageTest">
-        <methods>
-          <include name="intialiseBrowser"/>
-          <include name="afterMethod"/>
-          <include name="verifyWhetherTheUserIsAbleToLogout"/>
-        </methods>
-      </class> <!-- testscript.HomePageTest -->
     </classes>
   </test> <!-- ChromeTest(failed) -->
 </suite> <!-- Failed suite [paralleltesting] -->

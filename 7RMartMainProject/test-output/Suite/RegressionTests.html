@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>RegressionTests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Sep 02 00:05:25 IST 2025</td>
+<td>Started on:</td><td>Mon Sep 08 13:39:25 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>4 seconds (4022 ms)</td>
+<tr><td>Total time:</td><td>2 seconds (2638 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td>regression </td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -77,9 +77,110 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='testscript.LoginTest.loginWithIncorrectUsernameAndCorrectPassword()'><b>loginWithIncorrectUsernameAndCorrectPassword</b><br>Test class: testscript.LoginTest</td>
-<td></td>
-<td>1</td>
-<td>testscript.LoginTest@1ebea008</td></tr>
+<td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class org.apache.logging.log4j.core.impl.ThreadContextDataInjector
+	at org.apache.logging.log4j.core.impl.ThreadContextDataInjector$ForCopyOnWriteThreadContextMap.&lt;init&gt;(ThreadContextDataInjector.java:220)
+	at org.apache.logging.log4j.core.impl.ContextDataInjectorFactory.createDefaultInjector(ContextDataInjectorFactory.java:94)
+	at org.apache.logging.log4j.core.impl.ContextDataInjectorFactory.createInjector(ContextDataInjectorFactory.java:71)
+	at org.apache.logging.log4j.core.impl.ReusableLogEventFactory.&lt;init&gt;(ReusableLogEventFactory.java:42)
+	at org.apache.logging.log4j.core.config.LoggerConfig.&lt;clinit&gt;(LoggerConfig.java:101)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.&lt;init&gt;(AbstractConfiguration.java:136)
+	at org.apache.logging.log4j.core.config.NullConfiguration.&lt;init&gt;(NullConfiguration.java:32)
+	at org.apache.logging.log4j.core.LoggerContext.&lt;clinit&gt;(LoggerContext.java:74)
+	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.createContext(ClassLoaderContextSelector.java:254)
+	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.locateContext(ClassLoaderContextSelector.java:218)
+	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.getContext(ClassLoaderContextSelector.java:136)
+	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.getContext(ClassLoaderContextSelector.java:123)
+	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.getContext(ClassLoaderContextSelector.java:117)
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:150)
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:47)
+	at org.apache.logging.log4j.LogManager.getContext(LogManager.java:196)
+	at org.apache.logging.log4j.LogManager.getLogger(LogManager.java:599)
+	at org.apache.poi.ooxml.POIXMLDocumentPart.&lt;clinit&gt;(POIXMLDocumentPart.java:56)
+	at utilities.ExcelUtility.getStringData(ExcelUtility.java:21)
+	at testscript.LoginTest.loginWithIncorrectUsernameAndCorrectPassword(LoginTest.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.NoSuchMethodError: &apos;java.lang.ClassLoader[] org.apache.logging.log4j.util.LoaderUtil.getClassLoaders()&apos; [in thread &quot;main&quot;]
+	at org.apache.logging.log4j.core.impl.ThreadContextDataInjector.getServiceProviders(ThreadContextDataInjector.java:77)
+	at org.apache.logging.log4j.core.impl.ThreadContextDataInjector.&lt;clinit&gt;(ThreadContextDataInjector.java:64)
+	at org.apache.logging.log4j.core.impl.ThreadContextDataInjector$ForCopyOnWriteThreadContextMap.&lt;init&gt;(ThreadContextDataInjector.java:220)
+	at org.apache.logging.log4j.core.impl.ContextDataInjectorFactory.createDefaultInjector(ContextDataInjectorFactory.java:94)
+	at org.apache.logging.log4j.core.impl.ContextDataInjectorFactory.createInjector(ContextDataInjectorFactory.java:71)
+	at org.apache.logging.log4j.core.lookup.ContextMapLookup.&lt;init&gt;(ContextMapLookup.java:34)
+	at org.apache.logging.log4j.core.util.ReflectionUtil.instantiate(ReflectionUtil.java:189)
+	at org.apache.logging.log4j.core.lookup.Interpolator.&lt;init&gt;(Interpolator.java:81)
+	at org.apache.logging.log4j.core.lookup.Interpolator.&lt;init&gt;(Interpolator.java:100)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.&lt;init&gt;(AbstractConfiguration.java:133)
+	... 42 more
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2055472834", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2055472834'><pre>java.lang.NoClassDefFoundError: Could not initialize class org.apache.logging.log4j.core.impl.ThreadContextDataInjector
+	at org.apache.logging.log4j.core.impl.ThreadContextDataInjector$ForCopyOnWriteThreadContextMap.&lt;init&gt;(ThreadContextDataInjector.java:220)
+	at org.apache.logging.log4j.core.impl.ContextDataInjectorFactory.createDefaultInjector(ContextDataInjectorFactory.java:94)
+	at org.apache.logging.log4j.core.impl.ContextDataInjectorFactory.createInjector(ContextDataInjectorFactory.java:71)
+	at org.apache.logging.log4j.core.impl.ReusableLogEventFactory.&lt;init&gt;(ReusableLogEventFactory.java:42)
+	at org.apache.logging.log4j.core.config.LoggerConfig.&lt;clinit&gt;(LoggerConfig.java:101)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.&lt;init&gt;(AbstractConfiguration.java:136)
+	at org.apache.logging.log4j.core.config.NullConfiguration.&lt;init&gt;(NullConfiguration.java:32)
+	at org.apache.logging.log4j.core.LoggerContext.&lt;clinit&gt;(LoggerContext.java:74)
+	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.createContext(ClassLoaderContextSelector.java:254)
+	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.locateContext(ClassLoaderContextSelector.java:218)
+	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.getContext(ClassLoaderContextSelector.java:136)
+	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.getContext(ClassLoaderContextSelector.java:123)
+	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.getContext(ClassLoaderContextSelector.java:117)
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:150)
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:47)
+	at org.apache.logging.log4j.LogManager.getContext(LogManager.java:196)
+	at org.apache.logging.log4j.LogManager.getLogger(LogManager.java:599)
+	at org.apache.poi.ooxml.POIXMLDocumentPart.&lt;clinit&gt;(POIXMLDocumentPart.java:56)
+	at utilities.ExcelUtility.getStringData(ExcelUtility.java:21)
+	at testscript.LoginTest.loginWithIncorrectUsernameAndCorrectPassword(LoginTest.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.NoSuchMethodError: &apos;java.lang.ClassLoader[] org.apache.logging.log4j.util.LoaderUtil.getClassLoaders()&apos; [in thread &quot;main&quot;]
+	at org.apache.logging.log4j.core.impl.ThreadContextDataInjector.getServiceProviders(ThreadContextDataInjector.java:77)
+	at org.apache.logging.log4j.core.impl.ThreadContextDataInjector.&lt;clinit&gt;(ThreadContextDataInjector.java:64)
+	at org.apache.logging.log4j.core.impl.ThreadContextDataInjector$ForCopyOnWriteThreadContextMap.&lt;init&gt;(ThreadContextDataInjector.java:220)
+	at org.apache.logging.log4j.core.impl.ContextDataInjectorFactory.createDefaultInjector(ContextDataInjectorFactory.java:94)
+	at org.apache.logging.log4j.core.impl.ContextDataInjectorFactory.createInjector(ContextDataInjectorFactory.java:71)
+	at org.apache.logging.log4j.core.lookup.ContextMapLookup.&lt;init&gt;(ContextMapLookup.java:34)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.apache.logging.log4j.core.util.ReflectionUtil.instantiate(ReflectionUtil.java:189)
+	at org.apache.logging.log4j.core.lookup.Interpolator.&lt;init&gt;(Interpolator.java:81)
+	at org.apache.logging.log4j.core.lookup.Interpolator.&lt;init&gt;(Interpolator.java:100)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.&lt;init&gt;(AbstractConfiguration.java:133)
+	... 42 more
+</pre></div></td>
+<td>0</td>
+<td>testscript.LoginTest@1787f2a0</td></tr>
 </table><p>
 </body>
 </html>

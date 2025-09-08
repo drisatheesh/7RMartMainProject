@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <parameter name="browser" value="Chrome"/>
   <listeners>
     <listener class-name="generatereport.Listeners"/>
   </listeners>
-  <test thread-count="5" name="AdminUserTest(failed)">
+  <test thread-count="5" name="MainTest(failed)">
+    <parameter name="password" value="admin"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="username" value="admin"/>
     <classes>
-      <class name="testscript.AdminUserTest">
+      <class name="testscript.HomePageTest">
         <methods>
           <include name="intialiseBrowser"/>
           <include name="afterMethod"/>
-          <include name="verifyWhetherTheUserIsAbleToCreateAdminUserInformation"/>
+          <include name="verifyWhetherTheUserIsAbleToLogout"/>
         </methods>
-      </class> <!-- testscript.AdminUserTest -->
+      </class> <!-- testscript.HomePageTest -->
     </classes>
-  </test> <!-- AdminUserTest(failed) -->
+  </test> <!-- MainTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->
