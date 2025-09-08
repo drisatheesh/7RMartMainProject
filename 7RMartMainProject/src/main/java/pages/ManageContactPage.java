@@ -64,9 +64,9 @@ public class ManageContactPage {
 	}
 	public ManageContactPage clickUpdate()
 	{
-		//wait.waitForElementToBeClickable(driver, update);
-		page.javascript(update, driver);
 		wait.waitForElementToBeClickable(driver, update);
+		page.javascript(update, driver);
+		//wait.waitForElementToBeClickable(driver, update);
 		update.click();
 		return this;
 	}

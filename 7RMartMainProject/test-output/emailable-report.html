@@ -8,115 +8,11 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">MultiBrowserSuite</th></tr>
-<tr><td><a href="#t0">ChromeTest</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">7,359</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">FirefoxTest</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">14,626</td><td></td><td></td></tr>
-<tr><td><a href="#t2">EdgeTest</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">438,730</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">3</th><th class="num">0</th><th class="num">0</th><th class="num attn">3</th><th class="num">460,715</th><th colspan="2"></th></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">MainTest</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">6,411</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">MultiBrowserSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ChromeTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testscript.ManageContactTest</td><td><a href="#m0">verifyWhetherTheUserIsAbleToUpdateManageContact</a></td><td rowspan="1">1757320224717</td><td rowspan="1">510</td></tr><tr><th colspan="4">ChromeTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testscript.HomePageTest</td><td><a href="#m1">verifyWhetherTheUserIsAbleToLogout</a></td><td rowspan="1">1757320220918</td><td rowspan="1">1328</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">FirefoxTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testscript.ManageContactTest</td><td><a href="#m2">verifyWhetherTheUserIsAbleToUpdateManageContact</a></td><td rowspan="1">1757320231778</td><td rowspan="1">3</td></tr><tr><th colspan="4">FirefoxTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testscript.HomePageTest</td><td><a href="#m3">verifyWhetherTheUserIsAbleToLogout</a></td><td rowspan="1">1757320224165</td><td rowspan="1">1721</td></tr></tbody>
-<tbody id="t2"><tr><th colspan="4">EdgeTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testscript.ManageContactTest</td><td><a href="#m4">verifyWhetherTheUserIsAbleToUpdateManageContact</a></td><td rowspan="1">1757320656654</td><td rowspan="1">0</td></tr><tr><th colspan="4">EdgeTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testscript.HomePageTest</td><td><a href="#m5">verifyWhetherTheUserIsAbleToLogout</a></td><td rowspan="1">1757320431281</td><td rowspan="1">1262</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">MainTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testscript.ManageNewsTest</td><td><a href="#m0">verifyWhetherTheUserIsAbleToCreateNews</a></td><td rowspan="1">1757356441445</td><td rowspan="1">3259</td></tr></tbody>
 </table>
-<h2>ChromeTest</h2><h3 id="m0">testscript.ManageContactTest#verifyWhetherTheUserIsAbleToUpdateManageContact</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NoClassDefFoundError: Could not initialize class org.apache.logging.log4j.core.impl.ThreadContextDataInjector
-	at org.apache.logging.log4j.core.impl.ThreadContextDataInjector$ForCopyOnWriteThreadContextMap.&lt;init&gt;(ThreadContextDataInjector.java:220)
-	at org.apache.logging.log4j.core.impl.ContextDataInjectorFactory.createDefaultInjector(ContextDataInjectorFactory.java:94)
-	at org.apache.logging.log4j.core.impl.ContextDataInjectorFactory.createInjector(ContextDataInjectorFactory.java:71)
-	at org.apache.logging.log4j.core.impl.ReusableLogEventFactory.&lt;init&gt;(ReusableLogEventFactory.java:42)
-	at org.apache.logging.log4j.core.config.LoggerConfig.&lt;clinit&gt;(LoggerConfig.java:101)
-	at org.apache.logging.log4j.core.config.AbstractConfiguration.&lt;init&gt;(AbstractConfiguration.java:136)
-	at org.apache.logging.log4j.core.config.NullConfiguration.&lt;init&gt;(NullConfiguration.java:32)
-	at org.apache.logging.log4j.core.LoggerContext.&lt;clinit&gt;(LoggerContext.java:74)
-	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.createContext(ClassLoaderContextSelector.java:254)
-	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.locateContext(ClassLoaderContextSelector.java:218)
-	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.getContext(ClassLoaderContextSelector.java:136)
-	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.getContext(ClassLoaderContextSelector.java:123)
-	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.getContext(ClassLoaderContextSelector.java:117)
-	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:150)
-	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:47)
-	at org.apache.logging.log4j.LogManager.getContext(LogManager.java:196)
-	at org.apache.logging.log4j.LogManager.getLogger(LogManager.java:599)
-	at org.apache.poi.ooxml.POIXMLDocumentPart.&lt;clinit&gt;(POIXMLDocumentPart.java:56)
-	at utilities.ExcelUtility.getStringData(ExcelUtility.java:21)
-	at testscript.ManageContactTest.verifyWhetherTheUserIsAbleToUpdateManageContact(ManageContactTest.java:22)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.NoSuchMethodError: &apos;java.lang.ClassLoader[] org.apache.logging.log4j.util.LoaderUtil.getClassLoaders()&apos; [in thread &quot;TestNG-tests-1&quot;]
-	at org.apache.logging.log4j.core.impl.ThreadContextDataInjector.getServiceProviders(ThreadContextDataInjector.java:77)
-	at org.apache.logging.log4j.core.impl.ThreadContextDataInjector.&lt;clinit&gt;(ThreadContextDataInjector.java:64)
-	at org.apache.logging.log4j.core.impl.ThreadContextDataInjector$ForCopyOnWriteThreadContextMap.&lt;init&gt;(ThreadContextDataInjector.java:220)
-	at org.apache.logging.log4j.core.impl.ContextDataInjectorFactory.createDefaultInjector(ContextDataInjectorFactory.java:94)
-	at org.apache.logging.log4j.core.impl.ContextDataInjectorFactory.createInjector(ContextDataInjectorFactory.java:71)
-	at org.apache.logging.log4j.core.lookup.ContextMapLookup.&lt;init&gt;(ContextMapLookup.java:34)
-	at org.apache.logging.log4j.core.util.ReflectionUtil.instantiate(ReflectionUtil.java:189)
-	at org.apache.logging.log4j.core.lookup.Interpolator.&lt;init&gt;(Interpolator.java:81)
-	at org.apache.logging.log4j.core.lookup.Interpolator.&lt;init&gt;(Interpolator.java:100)
-	at org.apache.logging.log4j.core.config.AbstractConfiguration.&lt;init&gt;(AbstractConfiguration.java:133)
-	... 36 more
-... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">testscript.HomePageTest#verifyWhetherTheUserIsAbleToLogout</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>FirefoxTest</h2><h3 id="m2">testscript.ManageContactTest#verifyWhetherTheUserIsAbleToUpdateManageContact</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NoClassDefFoundError: Could not initialize class org.apache.poi.xssf.usermodel.XSSFWorkbook
-	at utilities.ExcelUtility.getStringData(ExcelUtility.java:21)
-	at testscript.ManageContactTest.verifyWhetherTheUserIsAbleToUpdateManageContact(ManageContactTest.java:22)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.NoClassDefFoundError: Could not initialize class org.apache.logging.log4j.core.impl.ThreadContextDataInjector [in thread &quot;TestNG-tests-1&quot;]
-	at org.apache.logging.log4j.core.impl.ThreadContextDataInjector$ForCopyOnWriteThreadContextMap.&lt;init&gt;(ThreadContextDataInjector.java:220)
-	at org.apache.logging.log4j.core.impl.ContextDataInjectorFactory.createDefaultInjector(ContextDataInjectorFactory.java:94)
-	at org.apache.logging.log4j.core.impl.ContextDataInjectorFactory.createInjector(ContextDataInjectorFactory.java:71)
-	at org.apache.logging.log4j.core.impl.ReusableLogEventFactory.&lt;init&gt;(ReusableLogEventFactory.java:42)
-	at org.apache.logging.log4j.core.config.LoggerConfig.&lt;clinit&gt;(LoggerConfig.java:101)
-	at org.apache.logging.log4j.core.config.AbstractConfiguration.&lt;init&gt;(AbstractConfiguration.java:136)
-	at org.apache.logging.log4j.core.config.NullConfiguration.&lt;init&gt;(NullConfiguration.java:32)
-	at org.apache.logging.log4j.core.LoggerContext.&lt;clinit&gt;(LoggerContext.java:74)
-	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.createContext(ClassLoaderContextSelector.java:254)
-	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.locateContext(ClassLoaderContextSelector.java:218)
-	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.getContext(ClassLoaderContextSelector.java:136)
-	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.getContext(ClassLoaderContextSelector.java:123)
-	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.getContext(ClassLoaderContextSelector.java:117)
-	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:150)
-	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:47)
-	at org.apache.logging.log4j.LogManager.getContext(LogManager.java:196)
-	at org.apache.logging.log4j.LogManager.getLogger(LogManager.java:599)
-	at org.apache.poi.ooxml.POIXMLDocumentPart.&lt;clinit&gt;(POIXMLDocumentPart.java:56)
-	... 24 more
-... Removed 17 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">testscript.HomePageTest#verifyWhetherTheUserIsAbleToLogout</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>EdgeTest</h2><h3 id="m4">testscript.ManageContactTest#verifyWhetherTheUserIsAbleToUpdateManageContact</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NoClassDefFoundError: Could not initialize class org.apache.poi.xssf.usermodel.XSSFWorkbook
-	at utilities.ExcelUtility.getStringData(ExcelUtility.java:21)
-	at testscript.ManageContactTest.verifyWhetherTheUserIsAbleToUpdateManageContact(ManageContactTest.java:22)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.NoClassDefFoundError: Could not initialize class org.apache.logging.log4j.core.impl.ThreadContextDataInjector [in thread &quot;TestNG-tests-1&quot;]
-	at org.apache.logging.log4j.core.impl.ThreadContextDataInjector$ForCopyOnWriteThreadContextMap.&lt;init&gt;(ThreadContextDataInjector.java:220)
-	at org.apache.logging.log4j.core.impl.ContextDataInjectorFactory.createDefaultInjector(ContextDataInjectorFactory.java:94)
-	at org.apache.logging.log4j.core.impl.ContextDataInjectorFactory.createInjector(ContextDataInjectorFactory.java:71)
-	at org.apache.logging.log4j.core.impl.ReusableLogEventFactory.&lt;init&gt;(ReusableLogEventFactory.java:42)
-	at org.apache.logging.log4j.core.config.LoggerConfig.&lt;clinit&gt;(LoggerConfig.java:101)
-	at org.apache.logging.log4j.core.config.AbstractConfiguration.&lt;init&gt;(AbstractConfiguration.java:136)
-	at org.apache.logging.log4j.core.config.NullConfiguration.&lt;init&gt;(NullConfiguration.java:32)
-	at org.apache.logging.log4j.core.LoggerContext.&lt;clinit&gt;(LoggerContext.java:74)
-	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.createContext(ClassLoaderContextSelector.java:254)
-	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.locateContext(ClassLoaderContextSelector.java:218)
-	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.getContext(ClassLoaderContextSelector.java:136)
-	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.getContext(ClassLoaderContextSelector.java:123)
-	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.getContext(ClassLoaderContextSelector.java:117)
-	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:150)
-	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:47)
-	at org.apache.logging.log4j.LogManager.getContext(LogManager.java:196)
-	at org.apache.logging.log4j.LogManager.getLogger(LogManager.java:599)
-	at org.apache.poi.ooxml.POIXMLDocumentPart.&lt;clinit&gt;(POIXMLDocumentPart.java:56)
-	... 24 more
-... Removed 17 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">testscript.HomePageTest#verifyWhetherTheUserIsAbleToLogout</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>MainTest</h2><h3 id="m0">testscript.ManageNewsTest#verifyWhetherTheUserIsAbleToCreateNews</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -29,10 +29,10 @@ public class AdminUserTest extends Base {
 	  loginpage.userpass(ExcelUtility.getStringData(4,0,"LoginTest"),ExcelUtility.getStringData(4,1,"LoginTest"));
 	  homepage=loginpage.signing();
 	  adminuserpage=homepage.moreinfoClick();
-	// String username=faker.getFakeFirstName();
-	 //String password=faker.getPassword();
+	 String username=faker.getFakeFirstName();
+	 String password=faker.getPassword();
 	  
-	  adminuserpage.newClick().usertext(ExcelUtility.getStringData(1,0,"AdminUserText")).password(ExcelUtility.getStringData(1,1,"AdminUserText")).select().saveClick();
+	  adminuserpage.newClick().usertext(username).password(password).select().saveClick();
 	/* AdminUserPage adminuserpage=new AdminUserPage(driver);
 	  adminuserpage.moreinfoClick();
 	  adminuserpage.newClick();
