@@ -16,11 +16,5 @@
             <class name="testscript.HomePageTest"/>
         </classes>
     </test>
-    <test name="FirefoxTest">
-        
-        <parameter name="password" value="admin"></parameter>
-        <classes>
-            <class name="testscript.HomePageTest"/>
-        </classes>
-    </test>
+    
 </suite>

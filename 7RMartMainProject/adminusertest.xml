@@ -2,22 +2,20 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
 
-<parameter name="browser" value="chrome"></parameter>
-<parameter name="username" value="admin"></parameter>
-<parameter name="password" value="admin"></parameter>
-	
+	<parameter name="browser" value="chrome"></parameter>
+	<parameter name="username" value="admin"></parameter>
+	<parameter name="password" value="admin"></parameter>
+
 	<test name="AdminUserTest">
 		<classes>
-		
-		
-			
-		
+
+
 			<class name="testscript.AdminUserTest">
-				
+
 			</class>
-			</classes>
-		
-		</test> <!--
+		</classes>
+
+	</test> <!--
 	MainTest -->
 </suite> <!--
 Suite -->

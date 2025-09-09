@@ -4,15 +4,16 @@
   <parameter name="password" value="admin"/>
   <parameter name="browser" value="chrome"/>
   <parameter name="username" value="admin"/>
-  <test thread-count="5" name="MainTest(failed)">
+  <test thread-count="5" name="AdminUserTest(failed)">
     <classes>
-      <class name="testscript.ManageContactTest">
+      <class name="testscript.AdminUserTest">
         <methods>
           <include name="intialiseBrowser"/>
-          <include name="verifyWhetherTheUserIsAbleToUpdateManageContact"/>
           <include name="afterMethod"/>
+          <include name="verifyWetherTheUserIsAbleToDeleteAdminUserInformation"/>
+          <include name="verifyWhetherTheUserIsAbleToCreateAdminUserInformation"/>
         </methods>
-      </class> <!-- testscript.ManageContactTest -->
+      </class> <!-- testscript.AdminUserTest -->
     </classes>
-  </test> <!-- MainTest(failed) -->
+  </test> <!-- AdminUserTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->
